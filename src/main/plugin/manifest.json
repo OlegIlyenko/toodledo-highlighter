@@ -1,0 +1,30 @@
+{
+    "name": "Toodledo Highlighter",
+    "version": "1.0",
+    "description": "Toodledo Highlighter shows fields with user defined colors",
+    "background_page": "background.html",
+    "icons": {
+        "16": "icons/icon-16.png",
+        "48": "icons/icon-48.png",
+        "128": "icons/icon-128.png"
+    },
+
+    "page_action": {
+        "default_icon": "icons/icon.png",
+        "default_title": "Configure toodledo",
+        "popup": "popup.html"
+    },
+
+    "content_scripts": [{
+        "matches": ["*://www.toodledo.com/*"],
+//        "css": ["css/big-font.css", "css/style.css"], // big font
+        "css": ["css/small-font.css", "css/style.css"], // normal font
+        "js": ["js/jquery-1.5.1.min.js", "js/helper.js"]
+    }],
+
+    "permissions": [
+        "http://*.toodledo.com/",
+        "https://*.toodledo.com/",
+        "tabs"
+    ]
+}

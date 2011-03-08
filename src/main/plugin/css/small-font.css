@@ -1,0 +1,17 @@
+.dett, .dett span {
+  background-color: transparent !important;
+}
+
+.highlightNone {
+    opacity: 0.4 !important;
+}
+
+.highlightedLayedout {
+    padding: 3px;
+    margin-top: -1px !important;
+}
+
+.highlightedTopSpan, .highlightedTopSpan:hover {
+    padding: 1px 3px !important;
+    border: 0px !important;
+}

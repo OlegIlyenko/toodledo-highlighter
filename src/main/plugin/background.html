@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <script>
+        function checkForValidUrl(tabId, changeInfo, tab) {
+            var domain = tab.url.match(/:\/\/(.[^/]+)/)[1];
+
+            if (domain == "www.toodledo.com") {
+                chrome.pageAction.show(tabId)
+
+                if (localStorage["enabled-all"] == "true") {
+                    chrome.pageAction.setIcon({tabId: tabId, path: "icons/icon.png"})
+                } else {
+                    chrome.pageAction.setIcon({tabId: tabId, path: "icons/icon-bw.png"})
+                }
+
+                // too slow - made in manifest
+                // injectBigCss(tabId)
+            }
+        }
+
+        function injectBigCss(tabId) {
+            chrome.tabs.insertCSS(tabId, {file: "css/big-font.css"})
+        }
+
+        // Listen for any changes to the URL of any tab.
+        chrome.tabs.onUpdated.addListener(checkForValidUrl);
+
+        chrome.extension.onRequest.addListener(function(request, sender, sendResponse) {
+            if (request.getStorage)
+                sendResponse({ls: localStorage});
+            else
+                sendResponse({}); // snub them.
+        });
+
+        function configChanged() {
+            chrome.tabs.getSelected(null, function(tab) {
+                var domain = tab.url.match(/:\/\/(.[^/]+)/)[1];
+
+                if (domain == "www.toodledo.com") {
+                    chrome.tabs.executeScript(tab.id, {code: "window.location.reload()"})
+                }
+            })
+        }
+    </script>
+</head>
+</html>

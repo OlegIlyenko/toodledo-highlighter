@@ -1,0 +1,138 @@
+a, a:visited {
+  color: #617791 !important;
+  text-decoration: none !important;
+}
+
+a:hover {
+  color: #9CBFE9 !important;
+  text-decoration: none !important;
+}
+
+.dets_top2 {
+    margin-top: 2px;
+}
+
+.sep, .dets_top, .dets_top2 {
+  font-size: 18px !important;
+}
+
+.det, .dett, .task {
+  height: 27px !important;
+  font-size: 21px !important;
+}
+
+.subtasks .det, .subtasks .dett, .subtasks .task {
+  height: 24px !important;
+  font-size: 19px !important;
+}
+
+.sp_help {
+  display: none !important;
+}
+
+#colhead {
+  font-size: 18px !important;
+  opacity: 0.5 !important;
+}
+
+#toolbar, #searchtask, #sorttask, #filtertask, #sharetask  {
+  font-size: 18px !important;
+}
+
+.btn {
+  padding: 5px !important;
+  background-color: #FFDCBC !important;
+  border-width: 1px !important;
+}
+
+.btn:hover {
+  padding: 5px !important;
+  background-color: #FFC893 !important;
+  border-width: 1px !important;
+}
+
+.note {
+  font-size: 18px !important;
+}
+
+.dett, .dett span {
+  background-color: transparent !important;
+}
+
+
+.ax, .subm, .sprites, .ch {
+  margin-top: 4px !important;
+}
+
+.det {
+  width: 230px !important;
+}
+
+.dets_bot .det {
+  opacity: 0.5 !important;
+}
+
+.ednote {
+  margin-left: 10px !important;
+}
+
+.nchlft {
+  margin-left: 26px !important;
+}
+
+.sep>img {
+  padding-left: 10px !important;
+  padding-bottom: 2px !important;
+}
+
+.note {
+  padding-top: 10px !important;
+  opacity: 0.7 !important;
+}
+
+#confilt, #tagfilt {
+  font-size: 130% !important;
+  right: 20px  !important;
+}
+
+.tic, .ticed, #searchField, #viewby, #lenTot, #actiondiv, #sbhover {
+  font-size: 130% !important;
+}
+
+.tab, .tabon {
+  font-size: 140% !important;
+  height: 21px !important;
+}
+
+#tabs  {
+  height: 30px !important;
+}
+
+#tabs .right {
+  font-size: 140% !important;
+}
+
+#viewby {
+padding-bottom: 20px !important;
+}
+
+.ticed {
+  color: #D19609 !important;
+}
+
+#action_addtask {
+  font-weight: bold !important;
+  font-size: 160% !important;
+}
+
+#action_addtask img, #addtask form img {
+  vertical-align: text-top !important;
+}
+
+#addtask, #addtask textarea {
+  font-size: 150% !important;
+}
+
+.field {
+  height: 62px !important;
+}

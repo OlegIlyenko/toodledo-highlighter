@@ -1,0 +1,41 @@
+.highlightedDiv {
+    border-radius: 5px;
+
+    padding-top: 3px !important;
+    padding-left: 3px !important;
+    margin-top: -1px !important;
+    margin-left: -3px !important;
+}
+
+.highlightedSpan {
+
+}
+
+.highlightedDiv-l {
+    border-radius: 5px;
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+}
+
+.highlightedSpan-l {
+    display: inline-block;
+}
+
+.highlightedTopSpan {
+    border-radius: 5px;
+}
+
+/* other stuff */
+
+.highlightNone {
+    opacity: 0.3;
+}
+
+.highlightedLayedout {
+    float: right !important;
+    width: auto !important;
+}
+
+.taskHighlightedLayedout {
+    width: auto !important;
+}
