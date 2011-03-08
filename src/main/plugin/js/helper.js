@@ -1,7 +1,7 @@
 $(function() {
     chrome.extension.sendRequest({getStorage: true}, function(response) {
         var ls = response.ls
-        var enabled = {all: ls["enabled-all"] == "true", layout: ls["enabled-layout"] == "true"}
+        var enabled = {all: ls["enabled-all"] == null || ls["enabled-all"] == undefined || ls["enabled-all"] == "true", layout: ls["enabled-layout"] == null || ls["enabled-layout"] == undefined || ls["enabled-layout"] == "true"}
 
         function setupPage() {
             addScript("Ajax.Responders.register({onComplete: function(obj) {if (!obj.url.match(/.*(set_cookie.php|get_contexts.php|get_tags.php)$/)) {var customEvent = document.createEvent('Event');customEvent.initEvent('ajaxRequest', true, true);$('ajaxInfo').dispatchEvent(customEvent)}}})")

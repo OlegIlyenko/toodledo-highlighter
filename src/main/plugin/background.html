@@ -9,7 +9,7 @@
             if (domain == "www.toodledo.com") {
                 chrome.pageAction.show(tabId)
 
-                if (localStorage["enabled-all"] == "true") {
+                if (localStorage["enabled-all"] == null || localStorage["enabled-all"] == undefined|| localStorage["enabled-all"] == "true") {
                     chrome.pageAction.setIcon({tabId: tabId, path: "icons/icon.png"})
                 } else {
                     chrome.pageAction.setIcon({tabId: tabId, path: "icons/icon-bw.png"})
