@@ -11,6 +11,11 @@
     margin-top: -1px !important;
 }
 
+.highlighted {
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
 .highlightedTopSpan, .highlightedTopSpan:hover {
     padding: 1px 3px !important;
     border: 0px !important;

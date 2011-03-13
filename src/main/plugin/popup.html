@@ -75,13 +75,19 @@
         .settings {
             width: 100%;
         }
+
+        .note {
+            font-style:italic;
+            color: #858484;
+        }
     </style>
 </head>
 
 <body style="width: 550px; height: 500px;">
     <div style="padding:10px; text-align: left">
         <input id="ea" type="checkbox" data-elem="enabled" data-type="all" /> <label for="ea">Enabled</label> <br>
-        <input id="el" type="checkbox" data-elem="enabled" data-type="layout" /> <label for="el">Custom Layout Enabled</label>
+        <input id="el" type="checkbox" data-elem="enabled" data-type="layout" /> <label for="el">Custom Layout Enabled</label> <br>
+        <input id="eh" type="checkbox" data-elem="enabled" data-type="hide" /> <label for="eh">More Focus Enabled <span class="note">(hide as mush as possible until needed)</span></label>
     </div>
 
     <table class="settings">
@@ -89,7 +95,7 @@
             <th>&nbsp;</th>
             <th style="white-space:nowrap;">Text</th>
             <th style="white-space:nowrap;">Background</th>
-            <th style="width:100%">Shown</th>
+            <th style="width:100%">Visible</th>
         </tr>
 
         <tr>
@@ -151,6 +157,18 @@
             <td><div class="colorSelector" data-elem="tag" data-type="text"></div></td>
             <td><div class="colorSelector" data-elem="tag" data-type="back"></div></td>
             <td><input type="checkbox" data-elem="tag" data-type="show" /></td>
+        </tr>
+        <tr>
+            <td>Location</td>
+            <td><div class="colorSelector" data-elem="location" data-type="text"></div></td>
+            <td><div class="colorSelector" data-elem="location" data-type="back"></div></td>
+            <td><input type="checkbox" data-elem="location" data-type="show" /></td>
+        </tr>
+        <tr>
+            <td>Timer</td>
+            <td><div class="colorSelector" data-elem="timer" data-type="text"></div></td>
+            <td><div class="colorSelector" data-elem="timer" data-type="back"></div></td>
+            <td><input type="checkbox" data-elem="timer" data-type="show" /></td>
         </tr>
     </table>
 

@@ -7,7 +7,7 @@
     margin-left: -3px !important;
 }
 
-.highlightedSpan {
+.highlightedDiv span {
 
 }
 
@@ -17,7 +17,7 @@
     padding-right: 4px !important;
 }
 
-.highlightedSpan-l {
+.highlightedDiv-l span {
     display: inline-block;
 }
 
@@ -38,4 +38,10 @@
 
 .taskHighlightedLayedout {
     width: auto !important;
+}
+
+.iconLayedout {
+    float: left !important;
+    padding-left: 5px;
+    padding-right: 5px;
 }
