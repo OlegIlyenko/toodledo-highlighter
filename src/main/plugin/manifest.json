@@ -1,6 +1,6 @@
 {
     "name": "Toodledo Highlighter",
-    "version": "1.1",
+    "version": "1.2",
     "description": "Toodledo Highlighter - allows you to focus on fields, that are important to you.",
     "background_page": "background.html",
     "icons": {

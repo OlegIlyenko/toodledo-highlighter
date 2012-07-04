@@ -25,7 +25,6 @@ $(function() {
 
         function doStuff() {
             ifEnabled(function (layout) {
-                console.info("doStuff")
                 changeLook("con", "context", layout)
                 changeLook("sat", "status", layout)
                 changeLook("fol", "folder", layout)
@@ -127,13 +126,10 @@ $(function() {
             var text = ls[name + "-text"]
             var show = ls[name + "-show"] == "true" ? true :(ls[name + "-show"] == "false" ? false : true)
 
-            var css = {
-                "background-color": "#" + back + " !important",
-                color: "#" + text + " !important"
-            }
-            var cssSpan = {color: css.color}
+            var css = "background-color: #" + back + " !important; " + "color: #" + text + " !important"
+            var cssSpan = "color: #" + text + " !important"
 
-            $("div.dets_top2 span[id^='" + prefix + "']:not(span[id^='lenx'])", "#tasks").addClass("highlightedTopSpan").css(css).map(function () {
+            $("div.dets_top2 span[id^='" + prefix + "']:not(span[id^='lenx'])", "#tasks").addClass("highlightedTopSpan").attr('style', css).map(function () {
                 var parent$ = $(this).parent()
                 $(emptySpan, parent$)
                     .map(function () {
@@ -148,8 +144,8 @@ $(function() {
                 // restore state
                 dett$.removeClass("highlightNone highlightedLayedout hInvisible highlighted").css({visibility: "visible"}).show()
 
-                span$.css(cssSpan)
-                dett$.addClass("highlightedDiv" + (layout ? "-l" : "")).css(css)
+                span$.attr('style', cssSpan)
+                dett$.addClass("highlightedDiv" + (layout ? "-l" : "")).attr('style', css)
 
                 $(emptySpan, dett$).map(function () {dett$.addClass("highlightNone")})
 //                $(notEmptySpan, dett$).map(function () {dett$.removeClass("highlightNone").show()})
